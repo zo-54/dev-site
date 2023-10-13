@@ -42,8 +42,8 @@ func createRoutes(r *mux.Router) {
 	// gRouter.PathPrefix("/").HandlerFunc(notFound)
 
 	// PaperCut bug endpoint
-	r.Methods("GET").Path("pc-bug").HandlerFunc(mockDownloadInfo)
-	r.Methods("POST").Path("pc-bug").HandlerFunc(logResponse)
+	r.Methods("GET").Path("/pc-bug").HandlerFunc(mockDownloadInfo)
+	r.Methods("POST").Path("/pc-bug").HandlerFunc(logResponse)
 
 	// 404 Handler
 	r.PathPrefix("/").HandlerFunc(notFound)
