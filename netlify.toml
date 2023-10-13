@@ -1,0 +1,5 @@
+[build]
+	base = "src"
+	command = "go build"
+	functions = "netlify/functions"
+	publish = "backend"
