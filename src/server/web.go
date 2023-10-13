@@ -7,7 +7,7 @@ import (
 	"net/http"
 )
 
-func notFound(_ http.ResponseWriter, r *http.Request) {
+func notFound(w http.ResponseWriter, r *http.Request) {
 	defer func() {
 		err := r.Body.Close()
 		if err != nil {
@@ -16,6 +16,8 @@ func notFound(_ http.ResponseWriter, r *http.Request) {
 	}()
 
 	fmt.Println("test")
+
+	w.Write([]byte("Hello, World!"))
 }
 
 type mockOps struct {
